@@ -1,0 +1,21 @@
+deployment:
+  name: search-api-deployment
+
+app:
+  name: search-api 
+
+image:
+  repository: nginx
+
+replicaCount: 1 
+
+service:
+  name: search-api-svc
+  port: 80
+  targetPort: 80
+
+ingress: 
+  name: altana-ingress
+
+host: 
+  name: search.altana.ai
